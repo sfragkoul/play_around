@@ -21,19 +21,19 @@ for n in people:
 plt.figure(figsize=(10, 6))
 
 # Plotting both sets of data
-plt.plot(people, prob_no_share_all, label='No shared birthday', marker='o')
-plt.plot(people, prob_2_share_all, label='Shared birthday', marker='x')
+plt.plot(people, prob_no_share_all, label='No shared birthday', marker='o', color='#009a4d', markersize=5)
+plt.plot(people, prob_2_share_all, label='Shared birthday', marker='x', color='#9a009a', markersize=5)
 
 #x-axis range
 plt.xticks(ticks=range(1, len(people) + 1), labels=people)
 
 # Draw a vertical line at 'Person 23'
-plt.axvline(x=23, color='red', linestyle=':')
+plt.axvline(x=23, color='#9a0000', linestyle=':', alpha = 0.4)
 
 # Adding labels and title
-plt.xlabel('Number of people')
-plt.ylabel('Probability')
-plt.title('The Birthday Problem')
+plt.xlabel('Number of people', fontsize=12)
+plt.ylabel('Probability', fontsize=12)
+plt.title('The Birthday Problem', fontsize=16)
 
 # Move the legend to the upper right corner
 plt.legend(loc='upper right')
